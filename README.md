@@ -91,9 +91,3 @@ npm start
 1. Build: `npm install && npm install --prefix frontend && npm install --prefix backend && npm run build`
 2. Start: `npm start`
 3. Переменные окружения из `.env.example`
-
-## Что сдать работодателю
-
-- [ ] Ссылка на GitHub-репозиторий
-- [ ] Ссылка на деплой
-- [ ] Рабочий Mailtrap API для проверки формы
