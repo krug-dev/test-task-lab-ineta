@@ -1,0 +1,108 @@
+@use 'variables' as *;
+
+.container {
+  width: min(100% - 2rem, $container);
+  margin-inline: auto;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, $color-accent, $color-accent-2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.eyebrow {
+  font-family: $font-mono;
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $color-accent;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: $radius-sm;
+  border: 1px solid transparent;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &--primary {
+    background: linear-gradient(135deg, $color-accent, #4fd89e);
+    color: $color-bg;
+
+    &:hover:not(:disabled) {
+      filter: brightness(1.05);
+      text-decoration: none;
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    border-color: $color-border;
+    color: $color-text;
+
+    &:hover:not(:disabled) {
+      border-color: $color-accent;
+      text-decoration: none;
+    }
+  }
+
+  &--small {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  &--block {
+    width: 100%;
+  }
+
+  &__spinner {
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-top-color: $color-bg;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+
+    &:not([hidden]) {
+      display: inline-block;
+    }
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  font-family: $font-mono;
+  border-radius: 4px;
+  background: rgba($color-accent, 0.15);
+  color: $color-accent;
+
+  &--muted {
+    background: rgba($color-muted, 0.15);
+    color: $color-muted;
+  }
+}

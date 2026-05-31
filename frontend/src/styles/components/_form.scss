@@ -1,0 +1,114 @@
+@use '../variables' as *;
+
+.contact-form {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  padding: 1.5rem;
+
+  @include md {
+    padding: 2rem;
+  }
+}
+
+.form-status {
+  min-height: 0;
+  margin-bottom: 0;
+  padding: 0;
+  border-radius: $radius-sm;
+  font-size: 0.9375rem;
+  transition: margin 0.2s, padding 0.2s;
+
+  &:not(:empty) {
+    margin-bottom: 1.25rem;
+    padding: 0.75rem 1rem;
+  }
+
+  &--success {
+    background: rgba($color-success, 0.12);
+    color: $color-success;
+    border: 1px solid rgba($color-success, 0.35);
+  }
+
+  &--error {
+    background: rgba($color-error, 0.12);
+    color: $color-error;
+    border: 1px solid rgba($color-error, 0.35);
+  }
+
+  &--loading {
+    background: rgba($color-accent-2, 0.1);
+    color: $color-accent-2;
+    border: 1px solid rgba($color-accent-2, 0.25);
+  }
+}
+
+.field {
+  margin-bottom: 1.25rem;
+
+  label {
+    display: block;
+    font-weight: 500;
+    color: $color-text;
+    margin-bottom: 0.4rem;
+  }
+
+  &__label-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+
+    label {
+      margin-bottom: 0;
+    }
+  }
+
+  &__hint {
+    font-size: 0.8125rem;
+    margin-bottom: 0.5rem;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: $color-bg;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    color: $color-text;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+      color: #7a8499;
+    }
+
+    &:focus {
+      border-color: $color-accent;
+      outline: none;
+    }
+
+    &.is-invalid {
+      border-color: $color-error;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  &__error {
+    display: block;
+    min-height: 1.25rem;
+    margin-top: 0.35rem;
+    font-size: 0.8125rem;
+    color: $color-error;
+  }
+}
+
+#submit-btn.is-loading .btn__label {
+  opacity: 0.7;
+}

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Fullstack-разработчик: портфолио, кейсы, контакты и форма обратной связи"
+    />
+    <title>Никита Круглов — Fullstack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <header class="header" id="top">
+      <div class="container header__inner">
+        <a class="logo" href="#top" aria-label="На главную">
+          <span class="logo__mark">&lt;/&gt;</span>
+          <span class="logo__text">AI.dev</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Открыть меню"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" id="site-nav" aria-label="Основная навигация">
+          <ul class="nav__list">
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#workflow">Подход</a></li>
+            <li><a href="#cases">Кейсы</a></li>
+            <li><a href="#contact">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <p class="eyebrow">Fullstack · AI-assisted development</p>
+            <h1 id="hero-title" class="hero__title">
+              Привет, я <span class="text-gradient">Никита</span> — разработчик,
+              который строит продукты от UI до API
+            </h1>
+            <p class="hero__lead">
+              3+ года коммерческой разработки. Делаю адаптивные интерфейсы, надёжные
+              API и осознанно использую AI как ускоритель, а не замену мышления.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#contact">Связаться</a>
+              <a class="btn btn--ghost" href="#cases">Смотреть кейсы</a>
+            </div>
+          </div>
+          <aside class="hero__card" aria-label="Краткая информация">
+            <dl class="stats">
+              <div class="stats__item">
+                <dt>Стек</dt>
+                <dd>TypeScript, React, Node.js, PostgreSQL</dd>
+              </div>
+              <div class="stats__item">
+                <dt>Опыт</dt>
+                <dd>3+ года коммерческой разработки</dd>
+              </div>
+              <div class="stats__item">
+                <dt>Фокус</dt>
+                <dd>Frontend, API, интеграции, DX</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <header class="section__header">
+            <h2 id="about-title">Обо мне</h2>
+            <p>Стек, опыт и направления, в которых работаю каждый день.</p>
+          </header>
+          <div class="cards cards--3">
+            <article class="card">
+              <h3>Стек</h3>
+              <ul class="tag-list">
+                <li>TypeScript</li>
+                <li>React / Next.js</li>
+                <li>Vue 3</li>
+                <li>Node.js / Express</li>
+                <li>PostgreSQL</li>
+                <li>SCSS / CSS Modules</li>
+                <li>Docker</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Опыт</h3>
+              <p>
+                3+ года коммерческой разработки: продуктовые команды,
+                аутсорс и pet-проекты. Участвовал в релизах от MVP до
+                production с тысячами пользователей.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Направления</h3>
+              <p>
+                SPA и лендинги, REST/GraphQL API, интеграции с платёжными и
+                AI-сервисами, оптимизация производительности и доступности
+                интерфейсов.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="workflow" aria-labelledby="workflow-title">
+        <div class="container">
+          <header class="section__header">
+            <h2 id="workflow-title">Как я работаю</h2>
+            <p>Подход к задачам и роль AI в ежедневной разработке.</p>
+          </header>
+          <ol class="workflow">
+            <li class="workflow__step">
+              <span class="workflow__num" aria-hidden="true">01</span>
+              <div>
+                <h3>Разбор задачи</h3>
+                <p>
+                  Сначала формулирую acceptance criteria, риски и границы
+                  решения. AI помогает набросать варианты, финальное решение
+                  принимаю сам.
+                </p>
+              </div>
+            </li>
+            <li class="workflow__step">
+              <span class="workflow__num" aria-hidden="true">02</span>
+              <div>
+                <h3>Итеративная разработка</h3>
+                <p>
+                  Мелкие PR, типизация, тесты на критичные сценарии. Cursor и
+                  ChatGPT — для boilerplate, рефакторинга и документации.
+                </p>
+              </div>
+            </li>
+            <li class="workflow__step">
+              <span class="workflow__num" aria-hidden="true">03</span>
+              <div>
+                <h3>Ревью и доводка</h3>
+                <p>
+                  Всё, что сгенерировал AI, проходит ручную проверку: безопасность,
+                  edge cases, соответствие дизайну и API-контрактам.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="cases" aria-labelledby="cases-title">
+        <div class="container">
+          <header class="section__header">
+            <h2 id="cases-title">Кейсы и проекты</h2>
+            <p>Реальные и учебные проекты — что делал лично.</p>
+          </header>
+          <div class="cards cards--cases">
+            <article class="card card--case" data-case-id="ecommerce">
+              <div class="card__meta">
+                <span class="badge">2025</span>
+                <span class="badge badge--muted">Fullstack</span>
+              </div>
+              <h3>E-commerce dashboard</h3>
+              <p>
+                Лично: архитектура фронта, таблицы заказов, фильтры, интеграция
+                с REST API, оптимизация рендера списков.
+              </p>
+              <button
+                type="button"
+                class="btn btn--small btn--ghost ai-summary-btn"
+                data-title="E-commerce dashboard"
+                data-description="Лично: архитектура фронта, таблицы заказов, фильтры, интеграция с REST API, оптимизация рендера списков."
+              >
+                AI summary
+              </button>
+              <p class="ai-summary-output" hidden aria-live="polite"></p>
+            </article>
+            <article class="card card--case" data-case-id="notifications">
+              <div class="card__meta">
+                <span class="badge">2024</span>
+                <span class="badge badge--muted">Backend</span>
+              </div>
+              <h3>Notification preferences API</h3>
+              <p>
+                Лично: проектирование схемы, валидация, idempotent updates,
+                документация OpenAPI и покрытие интеграционными тестами.
+              </p>
+              <button
+                type="button"
+                class="btn btn--small btn--ghost ai-summary-btn"
+                data-title="Notification preferences API"
+                data-description="Лично: проектирование схемы, валидация, idempotent updates, документация OpenAPI и покрытие интеграционными тестами."
+              >
+                AI summary
+              </button>
+              <p class="ai-summary-output" hidden aria-live="polite"></p>
+            </article>
+            <article class="card card--case" data-case-id="landing">
+              <div class="card__meta">
+                <span class="badge">2026</span>
+                <span class="badge badge--muted">Frontend</span>
+              </div>
+              <h3>Этот лендинг</h3>
+              <p>
+                Лично: вёрстка, SCSS-система, форма с состояниями, Node API,
+                отправка писем и AI summary на кейсах.
+              </p>
+              <button
+                type="button"
+                class="btn btn--small btn--ghost ai-summary-btn"
+                data-title="Developer landing"
+                data-description="Лично: вёрстка, SCSS-система, форма с состояниями, Node API, отправка писем и AI helper для комментария."
+              >
+                AI summary
+              </button>
+              <p class="ai-summary-output" hidden aria-live="polite"></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="contact" aria-labelledby="contact-title">
+        <div class="container contact-grid">
+          <div class="contact-info">
+            <header class="section__header section__header--left">
+              <h2 id="contact-title">Контакты</h2>
+              <p>Напишите — отвечу в течение рабочего дня.</p>
+            </header>
+            <ul class="contact-list">
+              <li>
+                <span class="contact-list__label">Email</span>
+                <a href="mailto:hotdemen@gmail.com">hotdemen@gmail.com</a>
+              </li>
+              <li>
+                <span class="contact-list__label">Telegram</span>
+                <a href="https://t.me/RIPDOUBLERR" target="_blank" rel="noopener noreferrer"
+                  >@RIPDOUBLERR</a
+                >
+              </li>
+              <li>
+                <span class="contact-list__label">GitHub</span>
+                <a
+                  href="https://github.com/krug-dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >github.com/krug-dev</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+
+            <div class="field">
+              <label for="name">Имя <span aria-hidden="true">*</span></label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+                minlength="2"
+                maxlength="100"
+                placeholder="Как к вам обращаться"
+              />
+              <span class="field__error" id="error-name"></span>
+            </div>
+
+            <div class="field">
+              <label for="phone">Телефон <span aria-hidden="true">*</span></label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                required
+                placeholder="+7 (999) 000-00-00"
+              />
+              <span class="field__error" id="error-phone"></span>
+            </div>
+
+            <div class="field">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                placeholder="you@example.com"
+              />
+              <span class="field__error" id="error-email"></span>
+            </div>
+
+            <div class="field">
+              <label for="comment">Комментарий <span aria-hidden="true">*</span></label>
+              <textarea
+                id="comment"
+                name="comment"
+                required
+                minlength="10"
+                maxlength="2000"
+                rows="5"
+                placeholder="Расскажите о задаче или вопросе"
+              ></textarea>
+              <span class="field__error" id="error-comment"></span>
+            </div>
+
+            <button class="btn btn--primary btn--block" type="submit" id="submit-btn">
+              <span class="btn__label">Отправить</span>
+              <span class="btn__spinner" hidden aria-hidden="true"></span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© 2026 Никита Круглов · Тестовое задание Fullstack</p>
+        <a href="#top">Наверх</a>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

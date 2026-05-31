@@ -1,0 +1,68 @@
+@use '../variables' as *;
+
+.hero {
+  padding: 4rem 0 5rem;
+
+  @include lg {
+    padding: 6rem 0 7rem;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 2.5rem;
+
+    @include lg {
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: start;
+    }
+  }
+
+  &__title {
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    color: $color-text;
+    margin-bottom: 1rem;
+  }
+
+  &__lead {
+    font-size: 1.125rem;
+    max-width: 36rem;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  &__card {
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    padding: 1.5rem;
+    box-shadow: $shadow-card;
+  }
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  &__item {
+    dt {
+      font-family: $font-mono;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: $color-accent;
+      margin-bottom: 0.25rem;
+    }
+
+    dd {
+      margin: 0;
+      color: $color-text;
+      font-size: 0.9375rem;
+    }
+  }
+}

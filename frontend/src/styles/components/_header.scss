@@ -1,0 +1,127 @@
+@use '../variables' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba($color-bg, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid $color-border;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 4rem;
+    gap: 1rem;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $color-text;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &__mark {
+    font-family: $font-mono;
+    color: $color-accent;
+  }
+}
+
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  color: $color-text;
+
+  span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: currentColor;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  &[aria-expanded='true'] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  &[aria-expanded='true'] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  &[aria-expanded='true'] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  @include md {
+    display: none;
+  }
+}
+
+.nav {
+  @media (max-width: #{$bp-md - 1px}) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: $color-bg-alt;
+    border-bottom: 1px solid $color-border;
+    padding: 1rem;
+    display: none;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    @include md {
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+
+    a {
+      color: $color-muted;
+      font-weight: 500;
+
+      &:hover {
+        color: $color-text;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.footer {
+  border-top: 1px solid $color-border;
+  padding: 2rem 0;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: $color-muted;
+
+    a {
+      color: $color-muted;
+    }
+  }
+}
