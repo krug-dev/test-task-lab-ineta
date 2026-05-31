@@ -67,11 +67,6 @@
   &--case {
     display: flex;
     flex-direction: column;
-
-    .ai-summary-btn {
-      margin-top: auto;
-      align-self: flex-start;
-    }
   }
 }
 
@@ -122,31 +117,6 @@
     font-size: 1.25rem;
     font-weight: 700;
     color: $color-accent;
-  }
-}
-
-.ai-summary-output {
-  margin-top: 0.75rem;
-  padding: 0.75rem;
-  font-size: 0.875rem;
-  background: rgba($color-accent-2, 0.08);
-  border-left: 3px solid $color-accent-2;
-  border-radius: 0 $radius-sm $radius-sm 0;
-  color: $color-text;
-
-  &:not([hidden]) {
-    display: block;
-  }
-
-  &.is-loading {
-    color: $color-muted;
-    font-style: italic;
-  }
-
-  &.is-error {
-    border-left-color: $color-error;
-    background: rgba($color-error, 0.08);
-    color: $color-error;
   }
 }
 

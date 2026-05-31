@@ -21,8 +21,6 @@ export const env = {
   },
   mailFrom: process.env.MAIL_FROM ?? 'noreply@example.com',
   mailOwner: process.env.MAIL_OWNER ?? 'owner@example.com',
-  openaiKey: process.env.OPENAI_API_KEY ?? '',
-  openaiModel: process.env.OPENAI_MODEL ?? 'gpt-4o-mini',
 };
 
 export function isMailtrapApiConfigured(): boolean {
@@ -35,8 +33,4 @@ export function isSmtpConfigured(): boolean {
 
 export function isEmailConfigured(): boolean {
   return isMailtrapApiConfigured() || isSmtpConfigured();
-}
-
-export function isOpenAiConfigured(): boolean {
-  return Boolean(env.openaiKey);
 }

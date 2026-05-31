@@ -17,8 +17,3 @@ export interface ApiSuccessBody {
   success: true;
   message: string;
 }
-
-export interface AiSummaryRequest {
-  title: string;
-  description: string;
-}

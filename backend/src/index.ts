@@ -4,7 +4,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { env } from './config.js';
 import { contactRouter } from './routes/contact.js';
-import { aiRouter } from './routes/ai.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -17,7 +16,6 @@ app.get('/api/health', (_req, res) => {
 });
 
 app.use('/api/contact', contactRouter);
-app.use('/api/ai', aiRouter);
 
 const frontendDist = path.resolve(__dirname, '../../frontend/dist');
 app.use(express.static(frontendDist));

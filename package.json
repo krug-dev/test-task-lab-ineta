@@ -2,7 +2,7 @@
   "name": "developer-landing",
   "version": "1.0.0",
   "private": true,
-  "description": "Developer portfolio landing with contact form API and AI helper",
+  "description": "Developer portfolio landing with contact form and Mailtrap API",
   "scripts": {
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "dev:client": "npm run dev --prefix frontend",
